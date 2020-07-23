@@ -26,6 +26,10 @@
     {
       list.items = MenuSearchService.getItems();
       MenuSearchService.getMatchedMenuItems(list.text);
+      if(list.text == [])
+      {
+        list.text='Nothing to show';
+      }
     }
 
   list.remove = function(index)
@@ -52,7 +56,7 @@
         {
           var obj = result.data['menu_items']
           var des = obj[i]['description']
-          if(des.toLowerCase().indexOf(searchTerm)!==-1)
+          if(des.toLowerCase().indexOf(searchTerm.toLowerCase())!==-1)
           {
             list.push(obj[i]);
           }
