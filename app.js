@@ -44,7 +44,7 @@
       list.splice(list.length)
       var promise = $http({
         method: 'GET',
-        url:('http://davids-restaurant.herokuapp.com/menu_items.json')
+        url:('https://davids-restaurant.herokuapp.com/menu_items.json')
       })
 
       promise.then(function(result){
