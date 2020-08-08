@@ -1,4 +1,7 @@
-<button ui-sref='categories'>Back</button>
-<ol>
+
+<!-- <ol>
   <li ng-repeat = 'i in $ctrl.items'>{{i['name']}}</li>
-</ol>
+</ol> -->
+<table>
+  <tr><th>Name</th><th>Description</th><th>price(large)</th></tr>
+  <tr ng-repeat = 'i in $ctrl.items'><td>{{i['name']}}</td><td>{{i['description']}}</td><td>{{i['price_large']}}</td></tr>

@@ -54,15 +54,18 @@ input[type="text"] {
 #floating
 {
   float:right;
-  width:50%;
+  width:70%;
   background:teal;
   padding:30px;
   border-radius:20px;
-  margin:50px
+  margin:10px
 }
 
 #first
 {
   background:red;
-  
+
+}
+table, th, td {
+  border: 1px solid black;
 }
