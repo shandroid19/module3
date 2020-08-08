@@ -50,3 +50,19 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+#floating
+{
+  float:right;
+  width:50%;
+  background:teal;
+  padding:30px;
+  border-radius:20px;
+  margin:50px
+}
+
+#first
+{
+  background:red;
+  
+}
