@@ -1,0 +1,64 @@
+
+<div class='container'>
+<div class= 'card'>
+  <div class= 'card-header'>
+    <h2>SignUp</h2>
+    </div>
+<div class= 'card-body'>
+<div class='container'>
+<form name = 'signup' novalidate>
+<div class = 'form-group'>
+
+<div class = 'form-row'>
+  <label class='col-2 col-form-label'>First name</label>
+  <input type='text' class=' col-3 form-control offset-1' name ='firstname' ng-model='signctrl.firstname' required ng-maxlength='20' placeholder = 'firstname'></input>
+  <span class = '4' ng-if="(signup.firstname.$error.minlength || signup.firstname.$error.required) && signup.firstname.$touched">
+  firstname must be less than 20 characters
+</span>
+</div>
+
+
+
+<div class = 'form-row'>
+  <label class='col-form-label col-2'>Last name</label>
+    <input type='text' class='col-4 form-control'name='lastname' ng-model='signctrl.lastname' required ng-maxlength='20' placeholder = 'lastname'>
+    <span class='col-2'
+    ng-if="(signup.lastname.$error.minlength || signup.lastname.$error.required) && signup.lastname.$touched">
+    firstname must be less than 20 characters
+  </span>
+</div>
+
+<div class = 'form-row'>
+  <div class='col-2'><label class='col-form-label'>Email</label></div>
+  <div class='col-4'><input required type='email' ng-model='signctrl.email' name='email'class='form-control col-6' placeholder = 'email'></input></div>
+    <span ng-if="(signup.email.$invalid && signup.email.$touched)">
+    invalid email
+  </span>
+</div>
+
+<div class = 'form-row'>
+  <label class='col-form-label col-4'>phone number</label>
+  <input type='text' name='phone' ng-model='signctrl.phone' required pattern = '(\d{3})-(\d{3})-(\d{4})'class='form-control col-6' placeholder = 'phone number'></input>
+  <span ng-if='signup.phone.$invalid && signup.phone.$touched'>
+    Phone number must be in the form ###-###-####
+  </span>
+</div>
+
+<div class = 'form-row'>
+  <label class='col-form-label col-4'>favourite dish</label>
+  <input type='text' class='form-control col-6' placeholder = 'favourite dish' ng-model='signctrl.no'></input>
+</div>
+
+<div class = 'form-row mt-3 ml-3'>
+  <div class = 'offset-2 mt-3 ml-3'>
+      <button ng-disabled="signup.$invalid || signupctrl.indexOf(signctrl.no.toLowerCase()) === -1"class = 'btn btn-success' ng-click='signctrl.submit()'>Submit</button>
+  </div>
+</div>
+<div ng-if="signctrl.invalidish"><h3>invalid dish</h3></div>
+<div ng-if="signctrl.saved"><h3>Registered</h3></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>

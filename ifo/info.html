@@ -1,0 +1,45 @@
+<div class = 'container'>
+  <span ng-hide = 'infoctrl.valid'><h2>You are not signed in</h2></span>
+  <div class='row' ng-if='infoctrl.valid'>
+    <div class = 'col-8'>
+      <div class='card'>
+        <div class='card-header'>
+          <h2>Registered Information</h2>
+        </div>
+        <div class='card-body'>
+        <div class='row'>
+        <h3>First name : {{infoctrl.user.firstname}}</h3>
+        </div>
+
+        <div class='row'>
+        <h3>Last name : {{infoctrl.user.lastname}}</h3>
+        </div>
+
+        <div class='row'>
+        <h3>Email : {{infoctrl.user.email}}</h3>
+        </div>
+
+        <div class='row'>
+        <h3>Phone number : {{infoctrl.user.phone}}</h3>
+        </div>
+
+
+        <div class="media">
+  <img class="d-flex img-fluid align-self-center mr-3" ng-if = "infoctrl.source" src = {{infoctrl.source}}>
+  <div class="media-body">
+    <h5 class="mt-0">title:</h5>
+    <p>{{infoctrl.dish.name}}</p>
+    <h5 class="mt-0">description:</h5>
+    <p>{{infoctrl.dish.description}}</p>
+  </div>
+</div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
